@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'create', loadChildren: './wrapper-modules/project-ms/project.creation.module#ProjectMSWrapperModule'
+    path: 'project', loadChildren: './wrapper-modules/project-ms/project.creation.module#ProjectMSWrapperModule'
   }
 ];
 
