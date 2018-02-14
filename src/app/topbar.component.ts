@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl : './topbar.component.html'
 })
 export class TopBarComponent implements OnInit{
-   
+
   projectname : string;
 
   stopListening: Function;
@@ -19,19 +19,19 @@ export class TopBarComponent implements OnInit{
 
   ngOnInit(){
 
-  } 
+  }
 
   handleMessage(event: Event) {
-    let message = event as MessageEvent;
+    /*let message = event as MessageEvent;
     if(message.data && message.data !=undefined){
       let messagePayload = JSON.parse(message.data);
-      
+
       if(messagePayload.ms_id == "project_ms")
       {
         this.projectname =  messagePayload.data.name;
       }
-      
-    }
+
+    }*/
   }
-  
+
 }

@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import {ProjectMsUIModule} from 'projectmsui';
 import { AppRouting } from './app.routing';
 import { TopBarComponent } from './topbar.component';
 
@@ -17,13 +16,11 @@ import { TopBarComponent } from './topbar.component';
   ],
   imports: [
     BrowserModule,
-    ProjectMsUIModule,
     AppRouting,
     AmexioWidgetModule,
-    FormsModule,
-    
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent,TopBarComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

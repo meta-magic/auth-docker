@@ -3,12 +3,11 @@
  */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectListComponent, CreateProjectComponent } from 'projectmsui';
- 
+
 
 const routes: Routes = [
-  { 
-    path: 'create', component: CreateProjectComponent
+  {
+    path: 'create', loadChildren: './wrapper-modules/project-ms/project.creation.module#ProjectMSWrapperModule'
   }
 ];
 
