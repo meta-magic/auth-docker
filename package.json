@@ -28,6 +28,7 @@
     "dnamsui": "file:../dna-ms-ui/dist/dnamsui-0.0.0.tgz",
     "projectmsui": "file:../projectmsui/dist/projectmsui-0.0.0.tgz",
     "rxjs": "^5.5.2",
+    "usermsui": "file:../user-ms-ui/dist/usermsui-0.0.0.tgz",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

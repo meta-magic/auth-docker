@@ -14,6 +14,9 @@ const routes: Routes = [
   },
   {
     path : 'auth', loadChildren: './wrapper-modules/auth-ms/auth.wrapper.module#AuthWrapperModule'
+  },
+  {
+    path : 'user', loadChildren: './wrapper-modules/user-ms/use.ms.module#UserMSWrapperModule'
   }
 ];
 
