@@ -8,11 +8,14 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'project', loadChildren: './wrapper-modules/project-ms/project.creation.module#ProjectMSWrapperModule'
+  },
+  {
+    path: 'dna', loadChildren: './wrapper-modules/dna-ms/dna.wrapper.module#DNAWrapperModule'
   }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forRoot(routes,{useHash : true}) ],
   exports: [ RouterModule ]
 })
 export class AppRouting {}
