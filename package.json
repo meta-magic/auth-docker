@@ -25,7 +25,7 @@
     "amexio-ng-extensions": "^4.0.7",
     "authmsui": "file:../authmsui/dist/authmsui-0.0.0.tgz",
     "core-js": "^2.4.1",
-    "dnamsui": "file:../dnamsui/dist/dnamsui-0.0.0.tgz",
+    "dnamsui": "file:../dna-ms-ui/dist/dnamsui-0.0.0.tgz",
     "projectmsui": "file:../projectmsui/dist/projectmsui-0.0.0.tgz",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"

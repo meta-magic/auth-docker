@@ -11,6 +11,9 @@ const routes: Routes = [
   },
   {
     path: 'dna', loadChildren: './wrapper-modules/dna-ms/dna.wrapper.module#DNAWrapperModule'
+  },
+  {
+    path : 'auth', loadChildren: './wrapper-modules/auth-ms/auth.wrapper.module#AuthWrapperModule'
   }
 ];
 
