@@ -24,6 +24,7 @@
     "@angular/router": "^5.0.0",
     "amexio-ng-extensions": "^4.0.7",
     "authmsui": "file:../authmsui/dist/authmsui-0.0.0.tgz",
+    "codepipelinemsui": "file:../codepipeline-ms-ui/dist/codepipelinemsui-0.0.0.tgz",
     "core-js": "^2.4.1",
     "dnamsui": "file:../dna-ms-ui/dist/dnamsui-0.0.0.tgz",
     "projectmsui": "file:../projectmsui/dist/projectmsui-0.0.0.tgz",

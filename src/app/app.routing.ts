@@ -17,6 +17,9 @@ const routes: Routes = [
   },
   {
     path : 'user', loadChildren: './wrapper-modules/user-ms/use.ms.module#UserMSWrapperModule'
+  },
+  {
+    path: 'codepipeline', loadChildren: './wrapper-modules/codepipeline-ms/codepipeline.wrapper.module#CodePipeLineWrapperModule'
   }
 ];
 
