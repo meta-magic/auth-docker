@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import { TopBarComponent } from './topbar.component';
+import {PlatformCommmonsModule} from "platform-commons";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -16,9 +18,11 @@ import { TopBarComponent } from './topbar.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRouting,
     AmexioWidgetModule,
-    FormsModule
+    FormsModule,
+    PlatformCommmonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

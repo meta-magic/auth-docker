@@ -22,13 +22,21 @@ export class TopBarComponent implements OnInit{
   }
 
   handleMessage(event: Event) {
-    /*let message = event as MessageEvent;
-    if(message.data && message.data !=undefined){
+    let message = event as MessageEvent;
+    let messagePayLoad = message.data;
+    console.log(messagePayLoad);
+    // let msgPayLoadObj = messagePayLoad != null ? JSON.parse(messagePayLoad) : null;
+    // if(msgPayLoadObj != null && msgPayLoadObj.hasOwnProperty('ms_id')){
+    //   console.log(msgPayLoadObj);
+    //   console.log(JSON.parse(msgPayLoadObj));
+    // }
+   /* if(message.data && message.data !=undefined){
       let messagePayload = JSON.parse(message.data);
 
       if(messagePayload.ms_id == "project_ms")
       {
         this.projectname =  messagePayload.data.name;
+        console.log(messagePayload);
       }
 
     }*/
