@@ -11,14 +11,25 @@ export class TopBarComponent implements OnInit{
 
   stopListening: Function;
 
+  isExpandSideNav:boolean;
+
   constructor(private route: Router, private renderer: Renderer2){
     this.stopListening =
     renderer.listen('window', 'message', this.handleMessage.bind(this));
+  }
 
+  // THIS CODE USED FOR EXPAND AND COLLAPSED THE SIDE BAR
+  onExpandIconClick(data:any){
+   this.isExpandSideNav= !this.isExpandSideNav;
+  }
+  //THIS IS USED FOR ROUTE THE ACTUAL MODULES
+  nodeClick(data:any){
+    if(data.routeLink){
+      this.route.navigate[data.routeLink];
+    }
   }
 
   ngOnInit(){
-
   }
 
   handleMessage(event: Event) {

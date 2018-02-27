@@ -1,21 +1,28 @@
-<amexio-nav [title]="'Amexio Canvas'"
-                [logo]="'assets/images/logos/amexio-logo.png'">
-      <amexio-nav-item position-center>{{projectname}}</amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="project/create">Create</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="project/list">List</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="project/code-explorer">Code-Explorer</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="dna/canvas">Canvas</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="dna/service-integration">Service Definition</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="dna/data-model">Data Model</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="dna/bounded-context">Bounded Context</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="auth/login">Login</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="user/sign-up">Signup</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="user/approval">Approval</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="codepipeline/task-ui">Task Manager</a> </amexio-nav-item>
-      <amexio-nav-item position-center><a routerLink="codepipeline/instance-manager">Instance Manager</a> </amexio-nav-item>
-      <amexio-nav-item position-center>
-        <amexio-image [icon-class]="'fa fa-cog fa-1x'"
-            [tooltip]="'Settings'">
+<amexio-nav [title]="'Amexio Canvas'" [logo]="'assets/images/logos/amexio-logo.png'">
+    <amexio-nav-item position-center>
+        <amexio-image [icon-class]="'fa fa-bars fa-1x'" (onClick)="onExpandIconClick($event)"></amexio-image>
+    </amexio-nav-item>
+    <amexio-nav-item position-center>
+        <amexio-image [icon-class]="'fa fa-cog fa-1x'" [tooltip]="'Settings'">
         </amexio-image>
-      </amexio-nav-item>
+    </amexio-nav-item>
 </amexio-nav>
+<br><br><br><br>
+<ng-container *ngIf="isExpandSideNav">
+    <amexio-row>
+        <amexio-column [size]="3">
+            <amexio-side-nav [http-url]="'assets/data/sidenav.json'" [http-method]="'get'" [data-reader]="'data'">
+            </amexio-side-nav>
+        </amexio-column>
+        <amexio-column [size]="9">
+            <router-outlet></router-outlet>
+        </amexio-column>
+    </amexio-row>
+</ng-container>
+<ng-container *ngIf="!isExpandSideNav">
+    <amexio-row>
+        <amexio-column [size]="12">
+            <router-outlet></router-outlet>
+        </amexio-column>
+    </amexio-row>
+</ng-container>

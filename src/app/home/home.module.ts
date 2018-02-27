@@ -1,3 +1,4 @@
+import { HomeComponent } from './home.component';
 /**
  * Created by pratik on 22/2/18.
  */
@@ -6,6 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
+   {
+    path: 'home', component:HomeComponent
+  },
   {
     path: 'project', loadChildren: './wrapper-modules/project-ms/project.creation.module#ProjectMSWrapperModule'
   },
