@@ -7,13 +7,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path:'',redirectTo:'login',pathMatch:'full'
+  },
+  {
+    path : 'login', loadChildren: './wrapper-modules/auth-ms/auth.wrapper.module#AuthWrapperModule'
+  },
+  {
+    path:'home',loadChildren:'./home/home.module#HomeRouting'
+  },
+  {
     path: 'project', loadChildren: './wrapper-modules/project-ms/project.creation.module#ProjectMSWrapperModule'
   },
   {
     path: 'dna', loadChildren: './wrapper-modules/dna-ms/dna.wrapper.module#DNAWrapperModule'
-  },
-  {
-    path : 'auth', loadChildren: './wrapper-modules/auth-ms/auth.wrapper.module#AuthWrapperModule'
   }
 ];
 

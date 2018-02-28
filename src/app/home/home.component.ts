@@ -1,4 +1,4 @@
-import { Component } from "@angular/core/src/metadata/directives";
+import { Component } from "@angular/core";
 
 /**
  * Created by pratik on 22/2/18.
@@ -6,7 +6,7 @@ import { Component } from "@angular/core/src/metadata/directives";
 @Component({
 selector:'home',
 template:`
-Home Compoennt
+  <top-bar></top-bar>
 `
 })
 export class HomeComponent{

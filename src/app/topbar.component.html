@@ -7,11 +7,11 @@
         </amexio-image>
     </amexio-nav-item>
 </amexio-nav>
-<br><br><br><br>
+<br><br><br>
 <ng-container *ngIf="isExpandSideNav">
     <amexio-row>
         <amexio-column [size]="3">
-            <amexio-side-nav [http-url]="'assets/data/sidenav.json'" [http-method]="'get'" [data-reader]="'data'">
+            <amexio-side-nav [http-url]="'/api/ide/ApplicationMenu/findApplicationMenus'" [http-method]="'get'" [data-reader]="'response'">
             </amexio-side-nav>
         </amexio-column>
         <amexio-column [size]="9">
