@@ -1,6 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'top-bar',
   templateUrl : './topbar.component.html'
@@ -24,8 +23,8 @@ export class TopBarComponent implements OnInit{
   }
   //THIS IS USED FOR ROUTE THE ACTUAL MODULES
   nodeClick(data:any){
-    if(data.routeLink){
-      this.route.navigate[data.routeLink];
+    if(data.routerLink){
+      this.route.navigate[data.routerLink];
     }
   }
 

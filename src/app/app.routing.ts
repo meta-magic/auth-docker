@@ -14,12 +14,6 @@ const routes: Routes = [
   },
   {
     path:'home',loadChildren:'./home/home.module#HomeRouting'
-  },
-  {
-    path: 'project', loadChildren: './wrapper-modules/project-ms/project.creation.module#ProjectMSWrapperModule'
-  },
-  {
-    path: 'dna', loadChildren: './wrapper-modules/dna-ms/dna.wrapper.module#DNAWrapperModule'
   }
 ];
 

@@ -5,20 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import {PlatformCommmonsModule} from "platform-commons";
-import {HttpClientModule} from "@angular/common/http";
-
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    HttpClientModule,
     AppRouting,
+    PlatformCommmonsModule,
     AmexioWidgetModule,
-    FormsModule,
-    PlatformCommmonsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

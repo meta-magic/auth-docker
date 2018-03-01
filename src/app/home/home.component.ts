@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from "@angular/core";
 
 /**
@@ -11,6 +12,5 @@ template:`
 })
 export class HomeComponent{
   constructor(){
-
   }
 }
