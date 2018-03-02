@@ -28,6 +28,7 @@
         "dnamsui": "http://localhost/desireplatform/micro-ui-libs/dnamsui.tgz",
         "codepipelinemsui": "http://localhost/desireplatform/micro-ui-libs/codepipelinemsui.tgz",
         "projectmsui": "http://localhost/desireplatform/micro-ui-libs/projectmsui.tgz",
+        "usermsui": "http://localhost/desireplatform/micro-ui-libs/usermsui.tgz",
         "core-js": "^2.4.1",
         "rxjs": "^5.5.2",
         "zone.js": "^0.8.14"
