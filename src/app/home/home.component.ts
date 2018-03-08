@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
 selector:'home',
 template:`
   <top-bar></top-bar>
+   <router-outlet></router-outlet>
 `
 })
 export class HomeComponent{

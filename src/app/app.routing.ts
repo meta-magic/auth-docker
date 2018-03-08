@@ -10,9 +10,6 @@ const routes: Routes = [
     path:'',redirectTo:'login',pathMatch:'full'
   },
   {
-    path: 'dna' , loadChildren : './wrapper-modules/dna-ms/dna.wrapper.module#DNAWrapperModule'
-  },
-  {
     path : 'login', loadChildren: './wrapper-modules/auth-ms/auth.wrapper.module#AuthWrapperModule'
   },
   {
