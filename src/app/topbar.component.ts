@@ -46,7 +46,7 @@ export class TopBarComponent implements OnInit{
     this.http.get('/api/ide/ApplicationMenu/findApplicationMenus').subscribe(
       response=>{
         appData=response;
-        console.log('data',appData)
+      //  console.log('data',appData)
       },
       error=>{
 
@@ -137,7 +137,7 @@ export class TopBarComponent implements OnInit{
     }, err => {
       console.log('Error occured');
     }, () => {
-      console.log('projid',selectProject.response);
+      // console.log('projid',selectProject.response);
         let newTokenid = selectProject.response.newtokenId;
        this.cookieService.set('tokenid', newTokenid);
 
@@ -152,7 +152,7 @@ export class TopBarComponent implements OnInit{
   handleMessage(event: Event) {
     let message = event as MessageEvent;
     let messagePayLoad = message.data;
-    console.log(messagePayLoad);
+    // console.log(messagePayLoad);
     // let msgPayLoadObj = messagePayLoad != null ? JSON.parse(messagePayLoad) : null;
     // if(msgPayLoadObj != null && msgPayLoadObj.hasOwnProperty('ms_id')){
     //   console.log(msgPayLoadObj);

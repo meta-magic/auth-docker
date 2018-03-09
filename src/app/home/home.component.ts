@@ -8,7 +8,10 @@ import { Component } from "@angular/core";
 selector:'home',
 template:`
   <top-bar></top-bar>
-   <router-outlet></router-outlet>
+  <div style="padding-top: 15px;">
+    <router-outlet></router-outlet>
+  </div>
+ 
 `
 })
 export class HomeComponent{
