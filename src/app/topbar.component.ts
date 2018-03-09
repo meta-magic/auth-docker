@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import {HttpClient} from '@angular/common/http'
+import {CookieService} from 'platform-commons';
 @Component({
   selector: 'top-bar',
   templateUrl : './topbar.component.html'
@@ -15,183 +16,14 @@ export class TopBarComponent implements OnInit{
   menus: any[] =[];
   projectmenus:any[]=[];
   projectList:any;
-  constructor(private _route: Router, private renderer: Renderer2,private http:HttpClient){
+  constructor(private _route: Router,private cookieService:CookieService, private renderer: Renderer2,private http:HttpClient){
     this.stopListening =
     renderer.listen('window', 'message', this.handleMessage.bind(this));
-  //  this.getAppMenus();
+   this.getAppMenus();
    this.getProjectList();
    this.projectmenus=[];
- this.setMenus(this.menus);
-this.menus= [
-    {
-      "featureData": null,
-      "isDisable": false,
-      "routerLink": "\"\"",
-      "childrens": [
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/dna/boundedcontextDefinition",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "1.1",
-          "text": "Bounded Context and Domain",
-          "isLeaf": true
-        },
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/dna/data-model",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "1.2",
-          "text": "Model Definition",
-          "isLeaf": true
-        },
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/dna/service-integration",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "1.3",
-          "text": "Service Definition",
-          "isLeaf": true
-        },
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/dna/canvas",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "1.4",
-          "text": "Amexio Canvas",
-          "isLeaf": true
-        }
-      ],
-      "isHeader": true,
-      "icon": "color_lens",
-      "menuId": "1.",
-      "text": "Dna",
-      "isLeaf": false
-    },
-    {
-      "featureData": null,
-      "isDisable": false,
-      "routerLink": "\"\"",
-      "childrens": [
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/codepipeline/task-ui",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "2.1",
-          "text": "Task Details",
-          "isLeaf": true
-        },
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/codepipeline/instance-manager",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "2.2",
-          "text": "Instance Management",
-          "isLeaf": true
-        },
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/project/code-explorer",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "2.3",
-          "text": "Code Explorer",
-          "isLeaf": true
-        }
-      ],
-      "isHeader": true,
-      "icon": "color_lens",
-      "menuId": "2.",
-      "text": "Code Pipeline",
-      "isLeaf": false
-    },
-    {
-      "featureData": null,
-      "isDisable": false,
-      "routerLink": "\"\"",
-      "childrens": [
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/user/usercreation",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "3.1",
-          "text": "User Creation",
-          "isLeaf": true
-        },
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/user/approval",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "3.2",
-          "text": "Approval",
-          "isLeaf": true
-        }
-      ],
-      "isHeader": true,
-      "icon": "color_lens",
-      "menuId": "3.",
-      "text": "Admin",
-      "isLeaf": false
-    },
-    {
-      "featureData": null,
-      "isDisable": false,
-      "routerLink": "\"\"",
-      "childrens": [
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/user/userprofile",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "4.1",
-          "text": "Profile",
-          "isLeaf": true
-        },
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "home/user/password",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "4.2",
-          "text": "Password Management",
-          "isLeaf": true
-        },
-        {
-          "featureData": null,
-          "isDisable": false,
-          "routerLink": "\"\"",
-          "isHeader": false,
-          "icon": "color_lens",
-          "menuId": "4.3",
-          "text": "Logout",
-          "isLeaf": true
-        }
-      ],
-      "isHeader": true,
-      "icon": "color_lens",
-      "menuId": "4.",
-      "text": "Setting",
-      "isLeaf": false
-    }
-  ]
+//  this.setMenus(this.menus);
+
 
 
    }
@@ -292,12 +124,31 @@ this.menus= [
       this._route.navigate([event.data.node.routerLink]);
       }else if(event.data.node.projectUUID && event.data.node.routerLink==""){
         this.projectname=event.data.node.text;
+        console.log('id',event.data.node)
+        this.onProjectSelect(event.data.node.projectUUID);
       }
+     
+    }
+      onProjectSelect(projectUUID: any) {
+        let selectProject: any;
+    this.http.get('/api/project/project/selectProject?projectUUID=' + projectUUID)
+      .subscribe(response => {
+        selectProject = response;
+    }, err => {
+      console.log('Error occured');
+    }, () => {
+      console.log('projid',selectProject.response);
+        let newTokenid = selectProject.response.newtokenId;
+       this.cookieService.set('tokenid', newTokenid);
 
-    }
-    onProjectSelect(data:any){
-   console.log('projdata',data);
-    }
+      
+    });
+
+
+
+
+      }
+   
   handleMessage(event: Event) {
     let message = event as MessageEvent;
     let messagePayLoad = message.data;
