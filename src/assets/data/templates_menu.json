@@ -1,0 +1,51 @@
+[
+  {
+    "name" : "Blank",
+    "key" : "blank",
+    "selected" : true,
+    "islayout": true
+  },
+  {
+    "name" : "2 Column Stacked",
+    "key" : "c2",
+    "selected" : false,
+    "islayout": true
+  },
+  {
+    "name" : "3 Column Stacked",
+    "key" : "c3",
+    "selected" : false,
+    "islayout": true
+  },
+  {
+    "name" : "2 Rows, 2 Columns",
+    "key" : "r2c2",
+    "selected" : false,
+    "islayout": true
+  },
+  {
+    "name" : "login Template",
+    "key" : "login",
+    "selected" : false,
+    "islayout": false
+  },
+  {
+    "name" : "Horizontal Form",
+    "key" : "hform",
+    "selected" : false,
+    "islayout": false
+  },
+  {
+    "name" : "Vertical Form",
+    "key" : "vform",
+    "selected" : false,
+    "islayout": false
+  },
+
+  {
+    "name" : "Wizard",
+    "key" : "wizard",
+    "selected" : false,
+    "islayout": false
+  }
+]

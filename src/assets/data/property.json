@@ -1,0 +1,25 @@
+{
+  "version": "4.0.10",
+  "components": [
+    {
+      "toggle": {
+        "keys": [
+          "name",
+          "shape",
+          "fieldLabel"
+        ],
+        "class" : {
+          "name" : "",
+          "shape" : "",
+          "fieldLabel" : "Enter Label Here",
+          "isComponentValid": true
+        },
+        "forms" : [
+          {"name" : "text" ,"label" : "Name", "required" : true},
+          {"shape" : "text" ,"label" : "Shape", "required" : true},
+          {"fieldLabel" : "text","label" : "Field Label", "required" : false}
+        ]
+      }
+    }
+  ]
+}

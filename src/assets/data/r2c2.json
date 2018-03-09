@@ -1,0 +1,61 @@
+{
+  "name": "canvaspage",
+  "child": [
+    {
+      "name": "row",
+      "id": "34645_row",
+      "child": [
+        {
+          "name": "column",
+          "id": "11379_column",
+          "child": [],
+          "properties": {
+            "isComponentValid": true,
+            "columnlg": "6"
+          }
+        },
+        {
+          "name": "column",
+          "id": "80527_column",
+          "child": [],
+          "properties": {
+            "isComponentValid": true,
+            "columnlg": "6"
+          }
+        }
+      ],
+      "properties": {
+        "isComponentValid": true
+      }
+    },
+    {
+      "name": "row",
+      "id": "34645_row",
+      "child": [
+        {
+          "name": "column",
+          "id": "11379_column",
+          "child": [],
+          "properties": {
+            "isComponentValid": true,
+            "columnlg": "6"
+          }
+        },
+        {
+          "name": "column",
+          "id": "80527_column",
+          "child": [],
+          "properties": {
+            "isComponentValid": true,
+            "columnlg": "6"
+          }
+        }
+      ],
+      "properties": {
+        "isComponentValid": true
+      }
+    }
+  ],
+  "properties": {},
+  "dataSource": {}
+}

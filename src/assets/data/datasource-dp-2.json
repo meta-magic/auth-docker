@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "successMessage": "data fetched successfully",
+  "successCode": "data.fetch.succees",
+  "errorMessage": null,
+  "errorCode": null,
+  "errors": null,
+  "response": [
+    {
+      "text": "Menu",
+      "expanded": true,
+      "children": [
+        {
+          "text": "treeId",
+          "expanded": false,
+          "children": null
+        },
+        {
+          "text": "data",
+          "expanded": false,
+          "children": null
+        }
+      ]
+    }
+  ],
+  "statusCode": null
+}

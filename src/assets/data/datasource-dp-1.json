@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "successMessage": "data fetched successfully",
+  "successCode": "data.fetch.succees",
+  "errorMessage": null,
+  "errorCode": null,
+  "errors": null,
+  "response": [
+    {
+      "operationId": null,
+      "operationName": "getMenus",
+      "comment": "getMenus",
+      "methodTypeId": 1,
+      "contentTypeId": 1,
+      "httpUrl": "/menus",
+      "inputParamList": [],
+      "outputParam": {
+        "outputParamTypeId": "1",
+        "outputParamName": "menu",
+        "outputParamType": "8a67a84c-7736-4a5b-b7ab-15fc3fd9cc05",
+        "collection": true
+      }
+    }
+  ],
+  "statusCode": null
+}

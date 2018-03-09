@@ -1,0 +1,442 @@
+{
+    "children": [{
+            "text": "Layouts",
+            "icon": "fa fa-desktop fa-fw",
+            "children": [{
+                    "text": "Accordion",
+                    "icon": "fa fa-bars fa-fw",
+                    "link": "accordion"
+                },
+                {
+                    "text": "Border Layout",
+                    "icon": "fa fa-id-card-o fa-fw",
+                    "link": "border"
+                },
+                {
+                    "text": "Column",
+                    "link": "column-demo",
+                    "icon": "fa fa-columns fa-fw",
+                    "key": "column"
+                },
+                {
+                    "text": "Card",
+                    "link": "card-demo",
+                    "icon": "fa fa-id-card-o fa-fw",
+                    "key": "card"
+                },
+                {
+                    "text": "Row",
+                    "link": "row-demo",
+                    "icon": "fa fa-bars fa-fw",
+                    "key": "row"
+                }
+
+            ]
+        },
+        {
+            "text": "Panels",
+            "icon": "fa fa-bars fa-fw",
+            "children": [{
+                    "text": "Carousel",
+                    "icon": "fa fa-indent fa-fw",
+                    "link": "carousel"
+                },
+
+                {
+                    "text": "Fieldset",
+                    "icon": "fa fa-id-card-o fa-fw",
+                    "link": "fieldset",
+                    "key": "fieldset"
+                },
+                {
+                    "text": "Panel",
+                    "icon": "fa fa-bars fa-fw",
+                    "link": "panel",
+                    "key": "panel"
+                },
+                {
+                    "text": "Steps",
+                    "icon": "fa fa-step-forward",
+                    "key": "stepbox"
+                },
+                {
+                    "text": "Tab",
+                    "icon": "fa fa-folder fa-fw",
+                    "children": [{
+                            "text": "Horizontal",
+                            "icon": "fa fa-indent fa-fw",
+                            "key": "horizontaltabcontainer"
+                        },
+                        {
+                            "text": "Vertical",
+                            "icon": "fa fa-outdent fa-fw",
+                            "key": "verticaltab"
+                        }
+                    ]
+                },
+                {
+                    "text": "Window",
+                    "icon": "fa fa-window-maximize fa-fw",
+                    "link": "window"
+                },
+                {
+                    "text": "Dialogue",
+                    "icon": "fa fa-window-maximize fa-fw",
+                    "link": "dialouge"
+                }
+            ]
+        },
+        {
+            "text": "Form Input",
+            "icon": "fa fa-clone fa-fw",
+            "children": [{
+                    "text": "Checkbox",
+                    "icon": "fa fa-check-square-o fa-fw",
+                    "link": "singlecheckbox-demo",
+                    "key": "checkbox"
+                },
+                {
+                    "text": "Checkbox Group",
+                    "icon": "fa fa-list fa-fw",
+                    "link": "checkboxgroup-demo",
+                    "key": "checkboxgroup"
+                },
+                {
+                    "text": "Date Picker",
+                    "icon": "fa fa-calendar fa-fw",
+                    "link": "date-picker-demo",
+                    "key": "datepicker"
+                },
+                {
+                    "text": "Time Picker",
+                    "icon": "fa fa-clock-o fa-fw",
+                    "link": "date-picker-demo",
+                    "key": "timepicker"
+                },
+                {
+                    "text": "DropDown",
+                    "icon": "fa fa-caret-square-o-down fa-fw",
+                    "key": "dropdown"
+                },
+                {
+                    "text": "Email Field",
+                    "icon": "fa fa-envelope-o fa-fw",
+                    "link": "email-demo",
+                    "key": "emailinput"
+                },
+                {
+                    "text": "File Upload",
+                    "icon": "fa fa-file fa-fw",
+                    "link": "fileupload-demo",
+                    "key": "fileupload"
+                },
+                {
+                    "text": "Label",
+                    "icon": "fa fa-terminal",
+                    "link": "label-demo",
+                    "key": "label"
+                },
+                {
+                    "text": "Number Field",
+                    "icon": "fa fa-phone fa-fw",
+                    "link": "number-demo",
+                    "key": "numberinput"
+                },
+                {
+                    "text": "Password Field",
+                    "icon": "fa fa-text-width fa-fw",
+                    "link": "password-demo",
+                    "key": "passwordinput"
+                },
+                {
+                    "text": "Radio Group",
+                    "icon": "fa fa-stop-circle-o fa-fw",
+                    "link": "radiogroup-demo",
+                    "key": "radiogroup"
+                },
+                {
+                    "text": "Rating",
+                    "icon": "fa fa-star-half-empty fa-fw",
+                    "link": "rating-demo",
+                    "key": "rating"
+                },
+                {
+                    "text": "Slider",
+                    "icon": "fa fa-sliders fa-fw",
+                    "link": "slider-demo",
+                    "key": "slider"
+                },
+                {
+                    "text": "Type Ahead",
+                    "icon": "fa fa-search-minus fa-fw",
+                    "link": "typeahead-demo",
+                    "key": "typeahead"
+                },
+                {
+                    "text": "Tag Field",
+                    "icon": "fa fa-tags",
+                    "link": "taginput-demo",
+                    "key": "taginput"
+                },
+                {
+                    "text": "Text Field",
+                    "link": "textinput",
+                    "icon": "fa fa-file-text-o fa-fw",
+                    "key": "textinput"
+                },
+                {
+                    "text": "TextArea Field",
+                    "icon": "fa fa-text-width fa-fw",
+                    "link": "textarea-demo",
+                    "key": "textareainput"
+                },
+                {
+                    "text": "Toggle",
+                    "icon": "fa fa-toggle-on fa-fw",
+                    "link": "toggle-demo",
+                    "key": "toggle"
+                }
+            ]
+        },
+        {
+            "text": "Form Actions",
+            "icon": "fa fa-keyboard-o fa-fw",
+            "children": [{
+                    "text": "Buttons",
+                    "icon": "fa fa-keyboard-o fa-fw",
+                    "children": [{
+                            "text": "Button",
+                            "icon": "fa fa-building-o fa-fw",
+                            "link": "button-demo",
+                            "key": "button"
+                        },
+                        {
+                            "text": "Button Group",
+                            "icon": "fa fa-newspaper-o fa-fw",
+                            "link": "buttongroup-demo",
+                            "key": "buttongroup"
+                        },
+                        {
+                            "text": "Button Dropdown",
+                            "icon": "fa fa-building fa-fw",
+                            "link": "buttondropdown-demo"
+                        }
+                    ]
+                },
+                {
+                    "text": "Notification",
+                    "icon": "fa fa-comments fa-fw",
+                    "link": "notification-demo"
+                },
+                {
+                    "text": "Paginator",
+                    "icon": "fa fa-arrows-h fa-fw",
+                    "link": "paginator-demo",
+                    "key": "paginator"
+                },
+                {
+                    "text": "Progress Bar",
+                    "icon": "fa fa-spinner fa-fw",
+                    "link": "progressbar-demo",
+                    "key": "progress"
+                }
+            ]
+        },
+        {
+            "text": "Data",
+            "icon": "fa fa-database fa-fw",
+            "children": [{
+                    "text": "Item Selector",
+                    "icon": "fa fa-exchange fa-fw",
+                    "link": "itemselector-demo",
+                    "key": "itemselector"
+                },
+                {
+                    "text": "Grid",
+                    "icon": "fa fa-database fa-fw",
+                    "key": "datagrid"
+                },
+                {
+                    "text": "Tree",
+                    "icon": "fa fa-tree fa-fw",
+                    "link": "simple-tree",
+                    "key": "tree"
+                },
+                {
+                    "text": "ListBox",
+                    "icon": "fa fa-list fa-fw",
+                    "link": "listbox-demo",
+                    "key": "listbox"
+                }
+            ]
+        },
+        {
+            "text": "Media",
+            "icon": "fa fa-keyboard-o fa-fw",
+            "children": [{
+                    "text": "Icon",
+                    "icon": "fa fa-font-awesome",
+                    "link": "icon",
+                    "key": "icon"
+                },
+                {
+                    "text": "Image",
+                    "icon": "fa fa-picture-o fa-fw",
+                    "link": "image-demo",
+                    "key": "image"
+                },
+                {
+                    "text": "Video Player",
+                    "icon": "fa fa-video-camera fa-fw",
+                    "link": "video-demo",
+                    "key": "video"
+                }
+            ]
+        },
+        {
+            "text": "App Navigation",
+            "icon": "fa fa-bars fa-fw",
+            "children": [{
+                    "text": "Dockbar",
+                    "icon": "fa fa-th-large fa-fw",
+                    "link": "dockbar-demo"
+                },
+                {
+                    "text": "Nav Bar",
+                    "icon": "fa fa-bars fa-fw",
+                    "link": "navbar-demo"
+                },
+                {
+                    "text": "Side Nav Bar",
+                    "icon": "fa fa-bars fa-fw",
+                    "link": "sidenav-demo"
+                },
+                {
+                    "text": "Menu Bar",
+                    "icon": "fa fa-bars fa-fw",
+                    "link": "menubar-demo"
+                }
+            ]
+        },
+        {
+            "text": "Charts",
+            "icon": "fa fa-keyboard-o fa-fw",
+            "children": [{
+                    "text": "Area Chart",
+                    "icon": "fa fa-area-chart fa-fw",
+                    "link": "area-chart-demo"
+                },
+                {
+                    "text": "Bar Chart",
+                    "icon": "fa fa-bar-chart fa-fw",
+                    "link": "bar-chart-demo"
+                },
+                {
+                    "text": "Bubble Chart",
+                    "icon": "fa fa-circle fa-fw",
+                    "link": "bubble-chart-demo"
+                },
+                {
+                    "text": "Candlestick Chart",
+                    "icon": "fa fa-stack-exchange fa-fw",
+                    "link": "candlestick-chart-demo"
+                },
+                {
+                    "text": "Candlestick Waterfall",
+                    "icon": "fa fa-tint fa-fw",
+                    "link": "candlestickwaterfall-chart-demo"
+                },
+                {
+                    "text": "Column Chart",
+                    "icon": "fa fa-columns fa-fw",
+                    "link": "column-chart-demo"
+                },
+                {
+                    "text": "Combo Chart",
+                    "icon": "fa fa-area-chart fa-fw",
+                    "link": "combo-chart-demo"
+                },
+                {
+                    "text": "Donut Chart",
+                    "icon": "fa fa-pie-chart fa-fw",
+                    "link": "donut-chart-demo"
+                },
+                {
+                    "text": "Histogram Chart",
+                    "icon": "fa fa-bars fa-fw",
+                    "link": "histogram-chart-demo"
+                },
+                {
+                    "text": "Line Chart",
+                    "icon": "fa fa-line-chart fa-fw",
+                    "link": "line-chart-demo"
+                },
+                {
+                    "text": "Pie Chart",
+                    "icon": "fa fa-pie-chart fa-fw",
+                    "link": "pie-chart-demo"
+                },
+                {
+                    "text": "Scatter Chart",
+                    "icon": "fa fa-dot-circle-o fa-fw",
+                    "link": "scatter-chart-demo"
+                },
+                {
+                    "text": "Timeline Chart",
+                    "icon": "fa fa-calendar fa-fw",
+                    "link": "timeline-chart-demo"
+                }
+            ]
+        },
+        {
+            "text": "Dashboard",
+            "icon": "fa fa-dashcube fa-fw",
+            "children": [{
+                    "text": "Gauge Chart",
+                    "icon": "fa fa-tachometer fa-fw",
+                    "link": "gauge-dashboard-demo"
+                },
+                {
+                    "text": "Data Points",
+                    "icon": "fa fa-address-card-o fa-fw",
+                    "link": "datapoint"
+                }
+            ]
+        },
+        {
+            "text": "Maps",
+            "icon": "fa fa-globe fa-fw",
+            "children": [{
+                    "text": "Geo Chart",
+                    "icon": "fa fa-globe fa-fw",
+                    "link": "geo-chart-demo"
+                },
+                {
+                    "text": "Tree Map",
+                    "icon": "fa fa-trello fa-fw",
+                    "link": "tree-map-demo"
+                }
+            ]
+        },
+        {
+            "text": "Enterprise",
+            "icon": "fa fa-medium",
+            "children": [{
+                    "text": "Media Content",
+                    "icon": "fa fa-id-card-o fa-fw",
+                    "link": "ee-content"
+                },
+                {
+                    "text": "YouTube Video Player",
+                    "icon": "fa fa-video-camera fa-fw",
+                    "link": "ee-video"
+                },
+                {
+                    "text": "Multi-item Carousel",
+                    "icon": "fa fa-television fa-fw",
+                    "link": "multi-item-carousel"
+                }
+            ]
+        }
+    ]
+}

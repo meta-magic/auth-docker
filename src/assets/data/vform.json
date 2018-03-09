@@ -1,0 +1,227 @@
+{
+  "name": "canvaspage",
+  "child": [
+    {
+      "name": "row",
+      "id": "83451_row",
+      "child": [
+        {
+          "name": "column",
+          "id": "91432_column",
+          "child": [
+            {
+              "name": "card",
+              "id": "65277_card",
+              "child": [
+                {
+                  "name": "cardbody",
+                  "id": "41963_cardbody",
+                  "child": [
+                    {
+                      "name": "row",
+                      "id": "11090_row",
+                      "child": [
+                        {
+                          "name": "column",
+                          "id": "28806_column",
+                          "child": [
+                            {
+                              "name": "textinput",
+                              "id": "10526_textinput",
+                              "child": [],
+                              "properties": {
+                                "isComponentValid": true,
+                                "fieldLabel": "Text Field",
+                                "name": "text",
+                                "placeholder": "",
+                                "disabled": false,
+                                "errorMsg": "",
+                                "hasLabel": true,
+                                "maxLength": 20,
+                                "minLength": 0,
+                                "maxErrorMsg": "",
+                                "minErrorMsg": "",
+                                "allowBlank": true,
+                                "iconFeedBack": false,
+                                "enablePopOver": false,
+                                "fontSize": "",
+                                "fontStyle": "",
+                                "fieldIcon": "",
+                                "popoverPlacement": "",
+                                "pattern": "",
+                                "fontFamily": ""
+                              }
+                            },
+                            {
+                              "name": "emailinput",
+                              "id": "13850_emailinput",
+                              "child": [],
+                              "properties": {
+                                "isComponentValid": true,
+                                "fieldLabel": "Email Input",
+                                "name": "text",
+                                "placeholder": "",
+                                "disabled": false,
+                                "errorMsg": "",
+                                "hasLabel": true,
+                                "maxLength": 20,
+                                "minLength": 0,
+                                "maxErrorMsg": "",
+                                "minErrorMsg": "",
+                                "allowBlank": true,
+                                "iconFeedBack": false,
+                                "enablePopOver": false,
+                                "fontSize": "",
+                                "fontStyle": "",
+                                "fieldIcon": "",
+                                "popoverPlacement": ""
+                              }
+                            },
+                            {
+                              "name": "textinput",
+                              "id": "61852_textinput",
+                              "child": [],
+                              "properties": {
+                                "isComponentValid": true,
+                                "fieldLabel": "Text Field",
+                                "name": "text",
+                                "placeholder": "",
+                                "disabled": false,
+                                "errorMsg": "",
+                                "hasLabel": true,
+                                "maxLength": 20,
+                                "minLength": 0,
+                                "maxErrorMsg": "",
+                                "minErrorMsg": "",
+                                "allowBlank": true,
+                                "iconFeedBack": false,
+                                "enablePopOver": false,
+                                "fontSize": "",
+                                "fontStyle": "",
+                                "fieldIcon": "",
+                                "popoverPlacement": "",
+                                "pattern": "",
+                                "fontFamily": ""
+                              }
+                            },
+                            {
+                              "name": "numberinput",
+                              "id": "30936_numberinput",
+                              "child": [],
+                              "properties": {
+                                "isComponentValid": true,
+                                "fieldLabel": "Number Input",
+                                "name": "number",
+                                "placeholder": "",
+                                "disabled": false,
+                                "errorMsg": "",
+                                "hasLabel": true,
+                                "maxValue": 20,
+                                "minValue": 0,
+                                "maxErrorMsg": "",
+                                "minErrorMsg": "",
+                                "allowBlank": true,
+                                "iconFeedBack": false,
+                                "enablePopOver": false,
+                                "fontSize": "",
+                                "fontStyle": "",
+                                "fieldIcon": "",
+                                "popoverPlacement": ""
+                              }
+                            }
+                          ],
+                          "properties": {
+                            "isComponentValid": true,
+                            "columnlg": 12
+                          }
+                        },
+                        {
+                          "name": "column",
+                          "id": "31832_column",
+                          "child": [
+                            {
+                              "name": "checkbox",
+                              "id": "52357_checkbox",
+                              "child": [],
+                              "properties": {
+                                "isComponentValid": true,
+                                "name": "check",
+                                "fieldLabel": "checkbox",
+                                "disabled": false
+                              }
+                            }
+                          ],
+                          "properties": {
+                            "isComponentValid": true,
+                            "columnlg": 10
+                          }
+                        },
+                        {
+                          "name": "column",
+                          "id": "68339_column",
+                          "child": [
+                            {
+                              "name": "button",
+                              "id": "69283_button",
+                              "child": [],
+                              "properties": {
+                                "isComponentValid": true,
+                                "name": "submit",
+                                "label": "Submit",
+                                "disabled": false,
+                                "icon": "",
+                                "type": "",
+                                "size": "",
+                                "block": false,
+                                "isLoading": false,
+                                "iconClass": ""
+                              }
+                            }
+                          ],
+                          "properties": {
+                            "isComponentValid": true,
+                            "columnlg": 2
+                          }
+                        }
+                      ],
+                      "properties": {
+                        "isComponentValid": true
+                      }
+                    }
+                  ],
+                  "properties": {
+                    "isComponentValid": true
+                  }
+                },
+                {
+                  "name": "cardaction",
+                  "id": "70269_cardaction",
+                  "child": [],
+                  "properties": {
+                    "isComponentValid": true
+                  }
+                }
+              ],
+              "properties": {
+                "isComponentValid": true,
+                "name": "",
+                "header": "Header",
+                "enableFooter": false,
+                "enableHeader": true
+              }
+            }
+          ],
+          "properties": {
+            "isComponentValid": true,
+            "columnlg": 12
+          }
+        }
+      ],
+      "properties": {
+        "isComponentValid": true
+      }
+    }
+  ],
+  "properties": {},
+  "dataSource": {}
+}
