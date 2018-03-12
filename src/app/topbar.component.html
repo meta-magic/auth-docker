@@ -11,8 +11,33 @@
     </amexio-nav-item>
   </amexio-nav>
 
-<br><br><br>     
-
+<br><br><br>  
+   
+<amexio-dialogue [show-dialogue]="confirmdialogue"
+               [title]="'Comfirm'"
+               [message]="'Are you sure you want to logout?'"
+               [message-type]="'confirm'"
+               [type]="'confirm'"
+               (actionStatus)="checkStatus($event)">
+</amexio-dialogue>
+<amexio-notification 
+   [data]="msgData"
+   [vertical-position]="'top'"
+   [horizontal-position]="'right'"
+   [auto-dismiss-msg]="true"
+   [auto-dismiss-msg-interval]="7000">
+</amexio-notification>
+<amexio-dialogue [show-dialogue]="isValidateForm" [message-type]="'error'" [closable]="false" [title]="'Error'" [type]="'alert'" [custom]="true">
+<amexio-body>
+    <ol>
+        <li *ngFor="let msgObj of validationMsgArray let index=index">{{msgObj}}</li>
+    </ol>
+</amexio-body>
+<amexio-action>
+    <amexio-button type="primary" (onClick)="okErrorBtnClick()" [label]="'Ok'">
+    </amexio-button>
+</amexio-action>
+</amexio-dialogue>
 
  <!-- <ng-container *ngIf="isExpandSideNav">
     <amexio-row>

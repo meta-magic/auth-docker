@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import {HttpClient} from '@angular/common/http'
 import {CookieService} from 'platform-commons';
+
 @Component({
   selector: 'top-bar',
   templateUrl : './topbar.component.html'
@@ -16,17 +17,27 @@ export class TopBarComponent implements OnInit{
   menus: any[] =[];
   projectmenus:any[]=[];
   projectList:any;
+  confirmdialogue:boolean;
+  msgData:any[]=[];
+    validationMsgArray: any = [];
+  isValidateForm: boolean = false;
   constructor(private _route: Router,private cookieService:CookieService, private renderer: Renderer2,private http:HttpClient){
     this.stopListening =
     renderer.listen('window', 'message', this.handleMessage.bind(this));
    this.getAppMenus();
    this.getProjectList();
    this.projectmenus=[];
+   
 //  this.setMenus(this.menus);
 
 
 
    }
+okErrorBtnClick(){
+      this.isValidateForm = false;
+    this.validationMsgArray = [];
+
+}
 
   // THIS CODE USED FOR EXPAND AND COLLAPSED THE SIDE BAR
   onExpandIconClick(data:any){
@@ -112,19 +123,58 @@ export class TopBarComponent implements OnInit{
   }
  
   externalLink(event:any){
-    // console.log('linkdata',event)
-  //   console.log('nodelink',event.data.node);
-  // console.log('nodelink1',event.data.node.routerLink);
     debugger;
+    console.log('linkdata',event.data.node);
+    if(event.data.node.text=="Model Definition" || event.data.node.text=="Service Definition" || 
+event.data.node.text=="Bounded Context and Domain" || event.data.node.text=="Amexio Canvas" ||
+event.data.node.text=="Code Explorer" || event.data.node.text=="Task Details") {
+      if(this.projectname){
+       this._route.navigate([event.data.node.routerLink]);
+      }else{
+        this.validationMsgArray.push('Please Select Project First ')
+         this.isValidateForm=true;
+      }
+      }
+   else if(event.data.node.routerLink && event.data.node.text!=="Logout" ){
      this._route.navigate([event.data.node.routerLink]);
+    }
+    if(event.data.node.text=="Logout"){
+     
+      this.logout();
+    }
+  }
+  logout(){
+    this.confirmdialogue=!this.confirmdialogue
+  }
+  checkStatus(data:any){
+    console.log('statusdata',data)
+    let LogoutMsg:any
+   if (data === 'ok') {
+        let response: any;
+      const headers = new Headers({'Content-Type': 'application/json;charset=UTF-8'});
+      this.http.post('/api/auth/login/logout',headers).subscribe(res => {
+        response = res;
+      }, err => {
+        console.log('Error occured');
+      }, () => {
+        if (response.success) {
+           this._route.navigate(['login']);
+            this.cookieService.delete('tokenid');
+           
+        }
+         console.log('errormsg',LogoutMsg);
+      });
+
+       }
+
   }
     projectLinkClick(event:any){
       if(!event.data.node.projectUUID){
-      console.log('linkdata',event.data.node)
+     
       this._route.navigate([event.data.node.routerLink]);
       }else if(event.data.node.projectUUID && event.data.node.routerLink==""){
         this.projectname=event.data.node.text;
-        console.log('id',event.data.node)
+       
         this.onProjectSelect(event.data.node.projectUUID);
       }
      
