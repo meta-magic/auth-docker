@@ -1,13 +1,13 @@
  <amexio-nav [enable-side-nav-position]="true" [title]="'Amexio'"
     [logo]="'assets/images/logos/amexio-logo.png'">
-      <amexio-nav-item position-right [type]="'link'" [title]="projectname" 
-      (onNavItemClick)="onProjectSelect($event)">
-    </amexio-nav-item>
     <amexio-nav-item position-right *ngFor="let projmenu of projectmenus" [type]="'menu'" [title]="projmenu.text" [data]="projmenu.childrens"
     (onNavItemClick)="projectLinkClick($event)">
     </amexio-nav-item>
     <amexio-nav-item position-right *ngFor="let menu1 of menus" [type]="'menu'" [title]="menu1.text" [data]="menu1.childrens"
     (onNavItemClick)="externalLink($event)">
+    </amexio-nav-item>
+ <amexio-nav-item position-right [type]="'link'" [title]="projectname"
+ (onNavItemClick)="getProjData()">
     </amexio-nav-item>
   </amexio-nav>
 

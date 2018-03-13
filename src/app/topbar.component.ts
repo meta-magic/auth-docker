@@ -10,7 +10,7 @@ import {CookieService} from 'platform-commons';
 export class TopBarComponent implements OnInit{
 
   projectname : string;
-
+  projectUUID:any;
   stopListening: Function;
 
   isExpandSideNav:boolean;
@@ -27,10 +27,7 @@ export class TopBarComponent implements OnInit{
    this.getAppMenus();
    this.getProjectList();
    this.projectmenus=[];
-   
-//  this.setMenus(this.menus);
-
-
+  //  this.setMenus(this.menus);
 
    }
 okErrorBtnClick(){
@@ -187,18 +184,22 @@ event.data.node.text=="Code Explorer" || event.data.node.text=="Task Details") {
     }, err => {
       console.log('Error occured');
     }, () => {
-      // console.log('projid',selectProject.response);
+       this.projectUUID=selectProject.response.projectUUID
         let newTokenid = selectProject.response.newtokenId;
        this.cookieService.set('tokenid', newTokenid);
-
-      
+      //this.getProjectDetails(selectProject.response.projectUUID);
     });
+}
+getProjectDetails(projectUUID:any){
+  debugger;
+  this._route.navigateByUrl('/home/project/create',projectUUID);
+}
 
-
-
-
-      }
-   
+getProjData(){
+const id=this.projectUUID
+console.log('id',this.projectUUID)
+ this._route.navigateByUrl('/home/project/create;id='+id);
+}
   handleMessage(event: Event) {
     let message = event as MessageEvent;
     let messagePayLoad = message.data;
