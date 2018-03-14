@@ -14,6 +14,9 @@ const routes: Routes = [
   },
   {
     path:'home',loadChildren:'./home/home.module#HomeRouting'
+  },
+  {
+    path: 'user' , loadChildren : './wrapper-modules/user-ms/use.ms.module#UserMSWrapperModule'
   }
 ];
 
