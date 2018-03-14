@@ -121,18 +121,7 @@ okErrorBtnClick(){
  
   externalLink(event:any){
     debugger;
-    console.log('linkdata',event.data.node);
-    if(event.data.node.text=="Model Definition" || event.data.node.text=="Service Definition" || 
-event.data.node.text=="Bounded Context and Domain" || event.data.node.text=="Amexio Canvas" ||
-event.data.node.text=="Code Explorer" || event.data.node.text=="Task Details") {
-      if(this.projectname){
-       this._route.navigate([event.data.node.routerLink]);
-      }else{
-        this.validationMsgArray.push('Please Select Project First ')
-         this.isValidateForm=true;
-      }
-      }
-   else if(event.data.node.routerLink && event.data.node.text!=="Logout" ){
+   if(event.data.node.routerLink && event.data.node.text!=="Logout" ){
      this._route.navigate([event.data.node.routerLink]);
     }
     if(event.data.node.text=="Logout"){
@@ -185,6 +174,7 @@ event.data.node.text=="Code Explorer" || event.data.node.text=="Task Details") {
       console.log('Error occured');
     }, () => {
        this.projectUUID=selectProject.response.projectUUID
+       console.log('i',selectProject.response.projectUUID);
         let newTokenid = selectProject.response.newtokenId;
        this.cookieService.set('tokenid', newTokenid);
       //this.getProjectDetails(selectProject.response.projectUUID);
