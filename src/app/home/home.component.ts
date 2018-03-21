@@ -8,9 +8,16 @@ import { Component } from "@angular/core";
 selector:'home',
 template:`
   <top-bar></top-bar>
-  <div style="padding: 15px 5px  5px 5px;">
+    <div class="route-container">
+
+  <amexio-row>
+<amexio-column [size]="12">
+
     <router-outlet></router-outlet>
-  </div>
+
+</amexio-column>
+</amexio-row>
+ </div>
  
 `
 })
