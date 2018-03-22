@@ -1,4 +1,5 @@
- <amexio-nav [enable-side-nav-position]="true" [title]="'Amexio'"
+<div style="font-family: 'Titillium Web', sans-serif;"> 
+<amexio-nav [enable-side-nav-position]="true" [title]="'Amexio'"
     [logo]="'assets/images/logos/amexio-logo.png'">
     <amexio-nav-item position-right *ngFor="let projmenu of projectmenus" [type]="'menu'" [title]="projmenu.text" [data]="projmenu.childrens"
     (onNavItemClick)="projectLinkClick($event)">
@@ -10,7 +11,7 @@
  (onNavItemClick)="getProjData()">
     </amexio-nav-item>
   </amexio-nav>
-
+</div>
 
    
 <amexio-dialogue [show-dialogue]="confirmdialogue"

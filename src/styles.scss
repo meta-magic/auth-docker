@@ -1,6 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-.route-container {
-padding: 70px 5px 5px 5px;
-}
     
+
+.route-container{
+  margin: 0px;
+}
+
+.route-container .route{
+  padding: 7px 5px 5px 5px ;
+  margin: 0px;
+ 
+}
+
+.flex-col-2pt5{
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.flex-col-9pt5{
+  flex: 0 0 100%;
+  max-width: 100%;
+}
