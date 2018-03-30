@@ -27,4 +27,4 @@ echo building desire3duishell
 cd /ui/ && git clone https://deepali-arvind:magic%2312@github.com/meta-magic/desire3duishell.git 
 echo building desire3duishell
 
-cd /ui/desire3duishell/ && cp -rf ui/dna-ms-ui/assests/* assets/S && rm -rf node_modules && rm -rf package.json && mv package_build.json package.json && npm i && ng build --prod 
+cd /ui/desire3duishell/ && rm -rf node_modules && rm -rf package.json && mv package_build.json package.json && npm i && ng build --prod 
