@@ -1,4 +1,6 @@
 #!/bin/bash 
+apt-get install -y awscli
+
 mkdir /ui
 echo cloning amexio.github.io
 cd /ui/ && git clone https://deepali-arvind:magic%2312@github.com/meta-magic/amexio.github.io.git -b v4.1 
