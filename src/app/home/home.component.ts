@@ -1,39 +1,15 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from "@angular/core";
-import { MessagingService } from 'platform-commons';
-/**
- * Created by pratik on 22/2/18.
- */
+import {Component} from '@angular/core';
+import {Router} from "@angular/router";
 @Component({
-selector:'home',
-template:`
-  <top-bar [ngStyle]="{'display' : isFullScreen ? 'none' : 'block'}"></top-bar>
-  <amexio-row>
-   <amexio-column  [size]="12"  [ngStyle]="{'padding-top' : isFullScreen ? '0%' : '5.7%'}">
-        <div class="route-container">
-          <div class="route">
-    <router-outlet></router-outlet>
-</div>
-</div>
-</amexio-column>
-</amexio-row>
-
- 
-`
+  selector: 'homeqq',
+  templateUrl: 'home.html'
 })
-export class HomeComponent{
-  isFullScreen : boolean;
-  fullscreenCheck : any;
-  constructor(public msgService : MessagingService){
-    this.fullscreenCheck = this.checkFullScreen.bind(this);
-    this.msgService.getMessage(this.fullscreenCheck);
+export class HomeComponent {
+  constructor(private _router : Router){
+
   }
-
-
-  checkFullScreen(data : any){
-    if(data.data.hasOwnProperty('fullscreen')){
-      debugger;
-      this.isFullScreen = data.data.fullscreen;
-    }
+  routeToLink(data: any){
+     if(!data.hasOwnProperty('children') && data.routerLink)
+      this._router.navigate([data.routerLink]);
   }
 }

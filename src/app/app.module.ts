@@ -1,28 +1,31 @@
-
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {CommonModule} from "@angular/common";
-import {AmexioWidgetModule} from 'amexio-ng-extensions';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
-import { AppRouting } from './app.routing';
-import {PlatformCommmonsModule} from "platform-commons";
+import {FormsModule} from "@angular/forms";
+import {
+  AmexioFormsModule, AmexioLayoutModule, AmexioNavModule, AmexioWidgetModule,  CommonDataService,
+  DeviceQueryService,IconLoaderService,AmexioChartsModule
+} from "amexio-ng-extensions";
 
+const APP_ROUTE: Routes = [
+  {path:'',loadChildren:'./home/home.module#HomeModule'}
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    CommonModule,
-    FormsModule,
-    AppRouting,
-    PlatformCommmonsModule,
     AmexioWidgetModule,
-    
+    AmexioLayoutModule,
+    FormsModule,AmexioNavModule,
+    AmexioLayoutModule,AmexioFormsModule,
+    RouterModule.forRoot(APP_ROUTE, { useHash: true })
+
   ],
-  providers: [],
+  providers: [DeviceQueryService,CommonDataService,IconLoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

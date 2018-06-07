@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('desire3duishell App', () => {
+describe('testapp App', () => {
   let page: AppPage;
 
   beforeEach(() => {
