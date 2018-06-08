@@ -6,14 +6,14 @@
 import {Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 @Component({
-  selector: 'tempui',
-  templateUrl: 'tempui.component.html'
+  selector: 'uichart',
+  templateUrl: 'uichart.component.html'
 })
-export class TempuiComponent implements OnInit{
-  tempuiModel:TempuiModel;
+export class UichartComponent implements OnInit{
+  uichartModel:UichartModel;
  
   constructor(private http: HttpClient) {
-    this.tempuiModel=new TempuiModel();
+    this.uichartModel=new UichartModel();
        }
   ngOnInit(){
   }
@@ -21,5 +21,5 @@ export class TempuiComponent implements OnInit{
 
    
 }
-export class TempuiModel{
+export class UichartModel{
  }
