@@ -1,0 +1,39 @@
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+            <amexio-header>
+                Horizontal Form
+            </amexio-header>
+            <amexio-body>
+                <amexio-row>
+                    <amexio-column size="6">
+                        <amexio-text-input [field-label]="'Text Input'" [(ngModel)]="tempuiModel.TextInput1" name="tempuiModel.TextInput1" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true" (onBlur)="onBlur_TextInput1($event)" (input)="input_TextInput1($event)"
+                            (focus)="focus_TextInput1($event)">
+                        </amexio-text-input>
+                        <amexio-email-input [field-label]="'Email Id'" [(ngModel)]="tempuiModel.EmailId" name="tempuiModel.EmailId" [place-holder]="'example@gmail.com'" [allow-blank]="true" [has-label]="true" (onBlur)="onBlur_EmailId($event)" (input)="input_EmailId($event)"
+                            (focus)="focus_EmailId($event)">
+                        </amexio-email-input>
+                        <amexio-checkbox [field-label]="'checkbox'" [(ngModel)]="tempuiModel.CheckBox" name="tempuiModel.CheckBox" [required]="true" (onSelection)="onSelection_CheckBox($event)">
+                        </amexio-checkbox>
+                    </amexio-column>
+                    <amexio-column size="6">
+                        <amexio-text-input [field-label]="'Text Input'" [(ngModel)]="tempuiModel.textInput2" name="tempuiModel.textInput2" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true" (onBlur)="onBlur_textInput2($event)" (input)="input_textInput2($event)"
+                            (focus)="focus_textInput2($event)">
+                        </amexio-text-input>
+                        <amexio-password-input [field-label]="'Password'" [(ngModel)]="tempuiModel.Password" name="tempuiModel.Password" [place-holder]="'Enter Password'" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true" (onBlur)="onBlur_Password($event)"
+                            (input)="input_Password($event)" (focus)="focus_Password($event)">
+                        </amexio-password-input>
+                    </amexio-column>
+                </amexio-row>
+
+
+            </amexio-body>
+
+            <amexio-action>
+                <amexio-button [label]="'Submit'" [type]="'success'" [tooltip]="'Submit'" [size]="'default'" [form-bind]="'SubmitBtn'" (onClick)="onClick_SubmitBtn($event)">
+                </amexio-button>
+
+            </amexio-action>
+        </amexio-card>
+    </amexio-column>
+</amexio-row>

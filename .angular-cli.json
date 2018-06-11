@@ -20,7 +20,7 @@
         "styles": [
             "styles.scss",
 	    "../node_modules/font-awesome/css/font-awesome.css",
-            "../node_modules/amexio-ng-extensions/styles/css/at-md-black.css"
+            "../node_modules/amexio-ng-extensions/styles/css/at-md-army-olive.css"
         ],
         "scripts": [],
         "environmentSource": "environments/environment.ts",
