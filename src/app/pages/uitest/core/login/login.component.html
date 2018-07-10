@@ -1,0 +1,33 @@
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+            <amexio-header>
+                Login
+            </amexio-header>
+            <amexio-body>
+                <amexio-row>
+                    <amexio-column size="12">
+                        <amexio-email-input [field-label]="'Email Id'" [(ngModel)]="loginModel.EmailId" name="loginModel.EmailId" [place-holder]="' example@gmail.com'" [allow-blank]="true" [has-label]="true" [icon-feedback]="true" [enable-popover]="true" (onBlur)="onBlur_EmailId($event)"
+                            (input)="input_EmailId($event)" (focus)="focus_EmailId($event)">
+                        </amexio-email-input>
+                        <amexio-password-input [field-label]="'Password'" [(ngModel)]="loginModel.Password" name="loginModel.Password" [place-holder]="'Enter Password'" [allow-blank]="true" [min-length]="6" [min-error-msg]="'Min Letter Will Be ^'" [max-length]="20" [max-error-msg]="'Max Letter Will Be 20'"
+                            [has-label]="true" [icon-feedback]="true" [enable-popover]="true" (onBlur)="onBlur_Password($event)" (input)="input_Password($event)" (focus)="focus_Password($event)">
+                        </amexio-password-input>
+                    </amexio-column>
+                </amexio-row>
+
+
+            </amexio-body>
+
+            <amexio-action>
+                <amexio-btn-group [size]="'default'">
+                    <amexio-button [label]="'Register'" [type]="'warning'" [tooltip]="'Link'" (onClick)="onClick_register($event)">
+                    </amexio-button>
+                    <amexio-button [label]="'Login'" [type]="'success'" [tooltip]="'Link'" (onClick)="onClick_login($event)">
+                    </amexio-button>
+                </amexio-btn-group>
+
+            </amexio-action>
+        </amexio-card>
+    </amexio-column>
+</amexio-row>

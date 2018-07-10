@@ -1,0 +1,35 @@
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+            <amexio-header>
+                Vertical Form
+            </amexio-header>
+            <amexio-body>
+                <amexio-text-input [field-label]="'Text Input'" [(ngModel)]="verModel.FirstTextInput" name="verModel.FirstTextInput" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true" (onBlur)="onBlur_FirstTextInput($event)" (input)="input_FirstTextInput($event)"
+                    (focus)="focus_FirstTextInput($event)">
+                </amexio-text-input>
+                <amexio-email-input [field-label]="'Email Input'" [(ngModel)]="verModel.EmailId" name="verModel.EmailId" [place-holder]="'example@gmail.com'" [allow-blank]="true" [has-label]="true" [icon-feedback]="true" (onBlur)="onBlur_EmailId($event)" (input)="input_EmailId($event)"
+                    (focus)="focus_EmailId($event)">
+                </amexio-email-input>
+                <amexio-text-input [field-label]="'Text Input'" [(ngModel)]="verModel.SecondTextInput" name="verModel.SecondTextInput" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true" (onBlur)="onBlur_SecondTextInput($event)" (input)="input_SecondTextInput($event)"
+                    (focus)="focus_SecondTextInput($event)">
+                </amexio-text-input>
+                <amexio-password-input [field-label]="'Password'" [(ngModel)]="verModel.Password" name="verModel.Password" [place-holder]="'Enter Password'" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true" [icon-feedback]="true" (onBlur)="onBlur_Password($event)"
+                    (input)="input_Password($event)" (focus)="focus_Password($event)">
+                </amexio-password-input>
+                <amexio-number-input [field-label]="'Number Input'" [(ngModel)]="verModel.NumberInput" name="verModel.NumberInput" [allow-blank]="true" [has-label]="true" [icon-feedback]="true" [min-value]="0" [max-value]="20" (onBlur)="onBlur_NumberInput($event)" (input)="input_NumberInput($event)"
+                    (focus)="focus_NumberInput($event)">
+                </amexio-number-input>
+                <amexio-checkbox [field-label]="'checkbox'" [(ngModel)]="verModel.CheckBox" name="verModel.CheckBox" [required]="true" (onSelection)="onSelection_CheckBox($event)">
+                </amexio-checkbox>
+
+            </amexio-body>
+
+            <amexio-action>
+                <amexio-button [label]="'Submit'" [type]="'success'" [tooltip]="'Submit'" [size]="'default'" [form-bind]="'SubmitBtn'" (onClick)="onClick_SubmitBtn($event)">
+                </amexio-button>
+
+            </amexio-action>
+        </amexio-card>
+    </amexio-column>
+</amexio-row>
